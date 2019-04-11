@@ -1217,9 +1217,9 @@ sup {
   padding-top: 56.25%;
   position: absolute;
   top: 0;
-  transition: box-shadow 1s var(--easeInOutQuart);
+  transition: box-shadow 2s var(--easeInOutQuart);
   width: 100%;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .js .art-c-sculpture {
