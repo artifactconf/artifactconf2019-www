@@ -1,443 +1,632 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>ARTIFACT Conference</title>
 
-<head>    
+  <meta name="description" content="ARTIFACT is an intimate conference that brings web designers and developers together to learn about emerging tools and best practices for creating sites in a multi-device world.">
+  <meta property="og:url" content="https://artifactconf.com">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ARTIFACT Conference">
+  <meta property="og:description" content="ARTIFACT is an intimate conference that brings web designers and developers together to learn about emerging tools and best practices for creating sites in a multi-device world.">
+  <meta property="og:image" content="https://artifactconf.com/img/artifact-og.gif">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@artifactconf" />
+  <meta name="twitter:title" content="ARTIFACT Conference">
+  <meta name="twitter:description" content="ARTIFACT is an intimate conference that brings web designers and developers together to learn about emerging tools and best practices for creating sites in a multi-device world.">
+  <meta name="twitter:image" content="https://artifactconf.com/img/artifact-og.gif">
 
-    <title>Artifact Conference</title>
-    <meta charset="utf-8" />
-
-    <!-- http://blog.javierusobiaga.com/stop-using-the-viewport-tag-until-you-know-ho -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
- 
-    <link rel="stylesheet" href="/-/css/artifact.css" />
-    
-
-    <!-- Thanks Jeremy! https://adactio.com/journal/9881  -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@artifactconf" />
-    <meta name="twitter:url" property="og:url" content="http://artifactconf.com/" />
-    <meta name="twitter:title" property="og:title" content="Artifact Conference" />
-    <meta name="description" content="An intimate, two-day, single-track conference about designing for everyone." />
-    <meta name="twitter:description" property="og:description" content="An intimate, two-day, single-track conference about designing for everyone." />
-    <meta name="twitter:image" property="og:image" content="http://artifactconf.com/img/artifact-share.png" />
-
-    <meta name="author" content="Artifact Conference">
-
+  <meta name="description" content="ARTIFACT is an intimate conference that brings web designers and developers together to learn about emerging tools and best practices for creating sites in a multi-device world.">
+  <meta name="keywords" content="ARTIFACT Conference, event, conference, Web design, Web Development, CSS3, HTML5, JavaScript, RWD, responsive web design, responsive, mobile web design">
+  <meta name="google-site-verification" content="I5-hqdlNu5_Img3qkqmRYHtZjD2R3SfNtYUrwpsXR1Q" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="msapplication-TileColor" content="#73c5d3"/>
+  <meta name="msapplication-TileImage" content="artifact_144x144.png" />
+  <!--[if (lt IE 9) & (!IEMobile)]>
+      <link href="/css/no-mq-base-108ae117.css" rel="stylesheet">
+      <![endif]-->
+      <!--[if (gte IE 9) | (IEMobile)]><!-->
+      <link href="/css/mq-base-6e6cb2de.css" rel="stylesheet">
+      <!--<![endif]-->
+  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/655912/752542/css/fonts.css" />
+    <script>
+      /* grunticon Stylesheet Loader | https://github.com/filamentgroup/grunticon | (c) 2012 Scott Jehl, Filament Group, Inc. | MIT license. */
+window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.createElementNS||!t.document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||window.opera&&-1===navigator.userAgent.indexOf("Chrome")),o=function(o){var r=t.document.createElement("link"),a=t.document.getElementsByTagName("script")[0];r.rel="stylesheet",r.href=e[o&&n?0:o?1:2],a.parentNode.insertBefore(r,a)},r=new t.Image;r.onerror=function(){o(!1)},r.onload=function(){o(1===r.width&&1===r.height)},r.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="}};
+      grunticon(["/img/grunticon/icons.data.svg.css", "/img/grunticon/icons.data.png.css", "/img/grunticon/icons.fallback.css"]);
+    </script>
+  <noscript><link href="/img/grunticon/icons.fallback.css" rel="stylesheet"></noscript>
+  <script src="/js/libs/modernizr.js"></script>
 </head>
-
-
-<body class="art-page--home">
-
-    <a class="art-c-skipLink" href="#main">Skip to main content</a>
-
-    <div class="art-c-sculpture"></div><!-- .art-c-sculpture -->
-
-    <header class="art-c-siteHeader">
-
-        <div class="art-dp-fullWidthWrapper_inner">
-
-            <nav class="art-c-mainNav art-c-mainNav--vertical">
-                <ul class="art-c-mainNav_list">
-                    <li class="art-c-mainNav_item">
-                        <mark class="art-c-mainNav_link art-c-mainNav_link--active">
-                            <span class="art-c-mainNav_text">Home</span>
-                        </mark>
-                    </li>
-                    <li class="art-c-mainNav_item">
-                        <a href="/speakers/" class="art-c-mainNav_link">
-                            <span class="art-c-mainNav_text">Speakers</span>
-                        </a>
-                    </li>
-                    <li class="art-c-mainNav_item">
-                        <a class="art-c-mainNav_link" href="/schedule/">
-                            <span class="art-c-mainNav_text">Schedule</span>
-                        </a>
-                    </li>
-                    <li class="art-c-mainNav_item">
-                        <a class="art-c-mainNav_link" href="/workshops/">
-                            <span class="art-c-mainNav_text">Workshops</span>
-                        </a>
-                    </li>
-                    <li class="art-c-mainNav_item">
-                        <a class="art-c-mainNav_link" href="/location/">
-                            <span class="art-c-mainNav_text">Location</span>
-                        </a>
-                    </li>
-                    <li class="art-c-mainNav_item">
-                        <a class="art-c-mainNav_link" href="/about/">
-                            <span class="art-c-mainNav_text">About</span>
-                        </a>
-                    </li>
-                    <li class="art-c-mainNav_item">
-                        <a class="art-c-mainNav_link art-c-loneStarLink" href="/tickets/">
-                            <span class="art-c-mainNav_text">Get Tickets</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
-        </div><!-- .art-dp-fullWidthWrapper_inner -->
-
-    </header><!-- .art-c-siteHeader -->
-
-
-    <main id="main">
-
-        <div class="art-c-siteHeader--intro">
-
-            <div class="art-dp-fullWidthWrapper_inner">
-
-                <h1 class="art-c-siteIntro">ARTIFACT is an intimate, two-day, single-track conference to share big ideas and best practices for creating sites that work for everyone.</h1>
-
-                <dl class="art-c-definitionList">
-                    <dt><a href="/schedule/">Conference</a></dt>
-                        <dd>September 30 &ndash; <span style="white-space: nowrap;">October 1, 2019</span></dd>
-                </dl>
-
-                <dl class="art-c-definitionList">
-                    <dt><a href="/workshops/">Workshops</a ></dt>
-                        <dd>October 2, 2019</dd>
-                </dl>
-
-                <dl class="art-c-definitionList">
-                    <dt><a href="/location/">Location</a ></dt>
-                        <dd>Alamo Drafthouse<br />Austin, <abbr title="Texas">TX</abbr></dd>
-                </dl>
-
-            </div><!-- .art-dp-fullWidthWrapper_inner -->
-
-        </div><!-- .art-c-siteHeader--intro -->
-
-
-
-        <section id="email-list" class="art-c-emailList">
-
-            <div class="art-dp-fullWidthWrapper_inner">
-
-                <form action="https://artifactconf.us19.list-manage.com/subscribe/post?u=33ab6ec5339257fc76d81b5bd&amp;id=5fd991ae41" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-                    
-                    <label for="mce-EMAIL">
-                        Join our mailing list to be the first notified about the latest with ARTIFACT.
-                    </label>
-
-                    <div class="art-c-emailList_inputs">
-                        <input id="mce-EMAIL" type="email" name="EMAIL" class="required email" required placeholder="you@gmail.com" />                        
-                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" />
-                    </div>
-
-                </form>
-
-            </div><!-- .art-dp-fullWidthWrapper_inner -->
-            
-        </section><!-- #emailList -->
-
-
-        <section id="speakers" class="art-c-speakerList">
-
-            <h2 class="art-c-speakerList_headline"><a href="/speakers/">Confirmed Speakers</a></h2>
-            <!-- <h3 class="art-c-speakerList_subhead">More speakers to be announced soon, y&rsquo;all!</h3> -->
-
-            <div class="art-c-mediaBlock">        
-                <h4 class="art-c-mediaBlock_titleWrapper">
-                    <a href="/speakers/#chris-coyier">
-                        <img lazyload="on" src="/img/speakers/chris-coyier.png" alt="Chris Coyier" />
-                        <span class="art-c-mediaBlock_title">Chris Coyier</span>
-                    </a>
-                    will speak about <strong class="art-dp-white">#FrontEndDev</strong>
-                </h4>
-            </div>
-
-            <div class="art-c-mediaBlock">        
-                <h4 class="art-c-mediaBlock_titleWrapper">
-                    <a href="/speakers/#sarah-drasner">
-                        <img lazyload="on" src="/img/speakers/sarah-drasner.png" alt="Sarah Drasner" />
-                        <span class="art-c-mediaBlock_title">Sarah Drasner</span>
-                    </a>
-                    will speak about <strong class="art-dp-white">#SVGAnimation</strong>
-                </h4>
-            </div>
-            
-
-            <div class="art-c-mediaBlock">        
-                <h4 class="art-c-mediaBlock_titleWrapper">
-                    <a href="/speakers/#benjamin-evans">
-                        <img lazyload="on" src="/img/speakers/benjamin-evans.png" alt="Benjamin Evans" />
-                        <span class="art-c-mediaBlock_title">Benjamin Evans</span>                        
-                    </a>
-                    will speak about <strong class="art-dp-white">#DiversityInDesign</strong>
-                </h4>
-            </div>
-
-
-            <div class="art-c-mediaBlock">        
-                <h4 class="art-c-mediaBlock_titleWrapper">
-                    <a href="/speakers/#chris-ferdinandi">
-                        <img lazyload="on" src="/img/speakers/chris-ferdinandi.png" alt="Chris Ferdinandi" />
-                        <span class="art-c-mediaBlock_title">Chris Ferdinandi</span>
-                    </a>
-                    will speak about <strong class="art-dp-white">#LeanWebDev</strong>
-                </h4>
-            </div>
-
-            <div class="art-c-mediaBlock">        
-                <h4 class="art-c-mediaBlock_titleWrapper">
-                    <a href="/speakers/#brad-frost">
-                        <img lazyload="on" src="/img/speakers/brad-frost.png" alt="Brad Frost" />
-                        <span class="art-c-mediaBlock_title">Brad Frost</span>
-                    </a>
-                    will deliver the <strong class="art-dp-white">#ClosingKeynote</strong>
-                </h4>
-            </div>
-
-            <div class="art-c-mediaBlock">        
-                <h4 class="art-c-mediaBlock_titleWrapper">
-                    <a href="/speakers/#jason-grigsby">
-                        <img lazyload="on" src="/img/speakers/jason-grigsby.png" alt="Jason Grigsby" />
-                        <span class="art-c-mediaBlock_title">Jason Grigsby</span>                        
-                    </a>
-                    will speak about <strong class="art-dp-white">#ProgressiveWebApps</strong>
-                </h4>
-            </div>
-
-            <div class="art-c-mediaBlock">        
-                <h4 class="art-c-mediaBlock_titleWrapper">
-                    <a href="/speakers/#tim-kadlec">
-                        <img lazyload="on" src="/img/speakers/tim-kadlec.png" alt="Tim Kadlec" />
-                        <span class="art-c-mediaBlock_title">Tim Kadlec</span>
-                    </a>
-                    will speak about <strong class="art-dp-white">#Performance</strong>
-                </h4>
-            </div>
-
-            <div class="art-c-mediaBlock">        
-                <h4 class="art-c-mediaBlock_titleWrapper">
-                    <a href="/speakers/#dan-mall">
-                        <img lazyload="on" src="/img/speakers/dan-mall.png" alt="Dan Mall" />
-                        <span class="art-c-mediaBlock_title">Dan Mall</span>
-                    </a>
-                    will speak about <strong class="art-dp-white">#DesignSystems</strong>
-                </h4>
-            </div>
-
-            <div class="art-c-mediaBlock">        
-                <h4 class="art-c-mediaBlock_titleWrapper">
-                    <a href="/speakers/#dave-rupert">
-                        <img lazyload="on" src="/img/speakers/dave-rupert.png" alt="Dave Rupert" />
-                        <span class="art-c-mediaBlock_title">Dave Rupert</span>
-                    </a>
-                    will speak about <strong class="art-dp-white">#ModernDevelopment</strong>
-                </h4>
-            </div>
-
-            <div class="art-c-mediaBlock">        
-                <h4 class="art-c-mediaBlock_titleWrapper">
-                    <a href="/speakers/#divya-sasidharan">
-                        <img lazyload="on" src="/img/speakers/divya-sasidharan.png" alt="Divya Sasidharan" />
-                        <span class="art-c-mediaBlock_title">Divya Sasidharan</span>
-                    </a>                
-                    will speak about <strong class="art-dp-white">#development</strong>
-                </h4>
-            </div>
-
-            <div class="art-c-mediaBlock">        
-                <h4 class="art-c-mediaBlock_titleWrapper">
-                    <a href="/speakers/#jen-simmons">
-                        <img lazyload="on" src="/img/speakers/jen-simmons.png" alt="Jen Simmons" />
-                        <span class="art-c-mediaBlock_title">Jen Simmons</span>
-                    </a>
-                    will speak about <strong class="art-dp-white">#Layout</strong>
-                </h4>
-            </div>
-
-            <div class="art-c-mediaBlock">        
-                <h4 class="art-c-mediaBlock_titleWrapper">
-                    <a href="/speakers/#david-dylan-thomas">
-                        <img lazyload="on" src="/img/speakers/david-dylan-thomas.png" alt="David Dylan Thomas" />
-                        <span class="art-c-mediaBlock_title">David Dylan Thomas</span>
-                    </a>
-                    will speak about <strong class="art-dp-white">#CognitiveBias</strong>
-                </h4>
-            </div>
-
-            <div class="art-c-mediaBlock">        
-                <h4 class="art-c-mediaBlock_titleWrapper">
-                    <a href="/speakers/#elle-waters">
-                        <img lazyload="on" src="/img/speakers/elle-waters.png" alt="Elle Waters" />
-                        <span class="art-c-mediaBlock_title">Elle Waters</span>
-                    </a>
-                    will speak about <strong class="art-dp-white">#Accessibility</strong>
-                </h4>
-            </div>
-
-            <div class="art-c-mediaBlock">        
-                <h4 class="art-c-mediaBlock_titleWrapper">
-                    <a href="/speakers/#kim-williams">
-                        <img lazyload="on" src="/img/speakers/kim-williams.png" alt="Kim Williams" />
-                        <span class="art-c-mediaBlock_title">Kim Williams</span>
-                    </a>
-                    will speak about <strong class="art-dp-white">#DesignSystems</strong>
-                </h4>
-            </div>
-
-            
-
-        </section><!-- #speakers -->
-
-
-
-        <section id="testimonials" class="art-c-testimonials">
-
-            <div class="art-dp-fullWidthWrapper_inner">
-
-                <h2 class="art-c-testimonials_headline">What folks say about ARTIFACT</h2>
-
-                <blockquote class="art-c-card">
-                    <p class="art-c-card_quote">#ARTIFACTconf is so my conference: front-end workflow, process, design strategy… sorry not sorry for geeking out.</p>
-                    <footer class="art-c-card_attribution">&mdash; <a href="https://twitter.com/mattrosno">@mattrosno</a></footer>
-                </blockquote>
-
-                <blockquote class="art-c-card">
-                    <p class="art-c-card_quote">Best conference &amp; venue for the $ that I&rsquo;ve been to. Hands down. Inspiration/ intelligence were top notch.</p>
-                    <footer class="art-c-card_attribution">&mdash; <a href="https://twitter.com/kevinsuttle">@kevinsuttle</a></footer>
-                </blockquote>
-
-                <blockquote class="art-c-card">
-                    <p class="art-c-card_quote">Anyone in this industry should attend. I learned a ton of new techniques, but I also came away inspired and ready to get to work.</p>
-                    <footer class="art-c-card_attribution">&mdash; Charley Allen, Murray State University</footer>
-                </blockquote>
-            
-            </div><!-- .art-dp-fullWidthWrapper--inner -->
-
-        </section><!-- #testimonials -->
-
-
-
-
-        <section id="past-events" class="art-c-speakerList">
-
-            <h2 class="art-c-speakerList_headline">This isn&rsquo;t our first rodeo</h2>
-            <h3 class="art-c-speakerList_subhead">Check out programs and photo galleries for previous ARTIFACT events.</h3>
-
-            <div class="art-c-mediaBlock">        
-                <h4 class="art-c-mediaBlock_titleWrapper">
-                    <a href="https://2014.providence.artifactconf.com/">
-                        <img lazyload="on" src="/img/home/past-events/providence2014.png" alt="Artifact Conference Providence 2014" />
-                        <span class="art-c-mediaBlock_title">Providence 2014</span>
-                    </a>
-                </h4>
-            </div>
-
-            <div class="art-c-mediaBlock">        
-                <h4 class="art-c-mediaBlock_titleWrapper">
-                    <a href="https://2014.austin.artifactconf.com/">
-                        <img lazyload="on" src="/img/home/past-events/austin2014.png" alt="Artifact Conference Austin 2014" />
-                        <span class="art-c-mediaBlock_title">Austin 2014</span>
-                    </a>
-                </h4>
-            </div>
-
-            <div class="art-c-mediaBlock">        
-                <h4 class="art-c-mediaBlock_titleWrapper">
-                    <a href="https://2013.providence.artifactconf.com/">
-                        <img lazyload="on" src="/img/home/past-events/providence2013.png" alt="Artifact Conference Providence 2013" />
-                        <span class="art-c-mediaBlock_title">Providence 2013</span>
-                    </a>
-                </h4>
-            </div>
-
-            <div class="art-c-mediaBlock">        
-                <h4 class="art-c-mediaBlock_titleWrapper">
-                    <a href="https://2013.austin.artifactconf.com/">
-                        <img lazyload="on" src="/img/home/past-events/austin2013.png" alt="Artifact Conference Austin 2013" />
-                        <span class="art-c-mediaBlock_title">Austin 2013</span>
-                    </a>
-                </h4>
-            </div>
-
-        </section><!-- #past-events -->
-
-    </main><!-- #main -->
-
-
-
-    <footer class="art-c-siteFooter">
-
-        <section id="sponsors" class="art-dp-fullWidthWrapper art-dp-lighterSection">
-
-            <div class="art-dp-fullWidthWrapper_inner art-c-imageGridSection">
-
-                
-                <h2 class="art-c-imageGridSection_headline">Artifact is proudly sponsored <span class="art-c-imageGridSection_headline_lastWord">by</span></h2>
-
-
-                <div class="art-c-imageGrid">
-
-
-                    <div class="art-c-imageGrid_largeImages">
-
-                        <img class="art-c-imageGrid--large" lazyload="on" src="https://via.placeholder.com/300x125.png" alt="" />
-
-                        <img class="art-c-imageGrid--large" lazyload="on" src="https://via.placeholder.com/300x125.png" alt="" />
-                    
-                    </div><!-- .art-c-imageGrid_largeImages -->
-
-
-                    <div class="art-c-imageGrid_smallImages">
-
-                        <img class="art-c-imageGrid--small" lazyload="on" src="https://via.placeholder.com/150x100.png" alt="" />
-
-                        <img class="art-c-imageGrid--small" lazyload="on" src="https://via.placeholder.com/150x100.png" alt="" />
-
-                        <img class="art-c-imageGrid--small" lazyload="on" src="https://via.placeholder.com/150x100.png" alt="" />
-                    
-                    </div><!-- .art-c-imageGrid_smallImages -->
-
-                
-                </div><!-- .art-c-imageGrid -->
-
-
-                <p class="art-c-imageGridSection_callToAction"><a href="/speakers/#">Become a sponsor</a></p>
-
-
-            </div><!-- .art-dp-fullWidthWrapper_inner -->
-
-
-        </section><!-- #sponsors -->
-
-
-        <section id="copyright" class="art-dp-align--center">
-
-            <div class="art-dp-fullWidthWrapper_inner">
-
-                <nav>
-                    <ul class="art-dp-list--horizontal art-dp-bullets--none art-dp-text--7">
-                        <li><a href="/about/">About</a></li>
-                        <li><a href="/contact/">Contact</a></li>
-                        <li><a href="/sponsor/">Sponsor Artifact</a></li>
-                        <li><a href="/code-of-conduct/">Code of Conduct</a></li>
-                        <li><a href="/terms/">Terms of Service</a></li>
-                        <li><a href="/privacy/">Privacy Policy</a></li>
-                        <li><a href="https://twitter.com/artifactconf">@artifactconf</a></li>
-                        <li><a href="https://www.facebook.com/ArtifactConference/">Artifact on Facebook</a></li>
-                    </ul>
-                </nav>
-
-                <p class="art-dp-text--7">&copy; <a href="https://www.learningwebdesign.com/">Jennifer Robbins</a>, <a href="https://twitter.com/ari4nne">Arianne Stiles</a>, and <a href="https://twitter.com/teleject">Christopher Schmitt</a>. Site by <a href="http://superfriend.ly/">SuperFriendly</a>.</p>
-
-            </div><!-- .art-dp-fullWidthWrapper_inner -->
-
-        </section><!-- #copyright -->
-
-
-    </footer>
+<body>
+<header class="site--header style--black">
+  <a class="action--navigation icon-menu">Menu</a>
+<nav class="site--navigation">
+  <ul class="navigation--list">
     
-    <!-- script lazyload="on" src="/-/js/artifact.js" defer></script -->
+    <li class="navigation--item"><a href="/" class="navigation--target">
+    <span class="navigation--decoration icon-circles"></span>
+      Home
+    </a>
 
+  </li>
+  
+    <li class="navigation--item"><a href="/austin" class="navigation--target">
+    <span class="navigation--decoration icon-circles-austin"></span>
+      Austin
+    </a>
+
+  </li>
+  
+    <li class="navigation--item"><a href="/providence" class="navigation--target">
+    <span class="navigation--decoration icon-circles-prov"></span>
+      Providence
+    </a>
+
+  </li>
+  
+</ul>
+</nav>
+
+  <div class="decoration--spiral icon-large-circles"></div>
+  <div class="layout--container">
+    <h1 class="site--title">
+      <a href="/" class="title--target icon-artifact-logo "><span style="display:none;">ARTIFACT Conference</span></a>
+    </h1>
+    
+    
+
+    
+    
+    <p class="header--message">ARTIFACT is an intimate, two-day, single-track conference for WEB DESIGNERS and DEVELOPERS. In this special 5th anniversary event, our all-star line-up shares big ideas and best practices for creating inclusive sites that work for a multitude of devices and the people who use them.</p>
+    <p class="button--container"><a href="/about" class="style--button">Learn More</a></p>
+  </div>
+
+</header>
+
+
+<div class="style--pink style--crossover">
+  <div class="layout--container">
+    <h2 class="upcoming-events--title">2019 Event</h2>
+<div class="upcoming-events--list"><div class="upcoming-events--container">
+    <a href="https://artifactconf.ticketspice.com/artifact-conference-2019" class="upcoming-events--target">
+      <div class="upcoming-events--content">
+        <div class="upcoming-events--icon icon-circles-white-austin"></div>
+        <div class="upcoming-events--info">
+          <h3 class="upcoming-events--city">Austin, TX</h3>
+          <p class="upcoming-events--date">September 30 - October 2</p>
+          <p class="upcoming-events--location">Alamo Drafthouse S. Lamar</p>
+        </div>
+        <div class="style--button">Get tickets</div>
+      </div>
+    </a>
+  </div>
+  <!--
+  <div class="upcoming-events--container">
+ <a href="providence" class="upcoming-events--target">
+      <div class="upcoming-events--content">
+        <div class="upcoming-events--icon icon-circles-white-prov"></div>
+        <div class="upcoming-events--info">
+          <h3 class="upcoming-events--city">&nbsp;</h3>
+          <p class="upcoming-events--date">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+          <p class="upcoming-events--location">&nbsp;</p>
+        </div>
+        <div class="style--button">&nbsp;</div>
+      </div>
+    </a> 
+    </div> -->
+</div>
+
+  </div>
+
+  <div class="layout--container" hidden>
+    <ul class="speakers--list unjank"><li class="speakers--highlight speakers--keynote">
+      <a href="/speakers/jeremy-keith" class="speakers--target">
+        <div class="speakers--photo-container">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/speakers/jeremy-keith.jpg" class="speakers--photo" alt="Jeremy Keith">
+          <noscript>
+            <img src="img/speakers/jeremy-keith.jpg" class="speakers--photo" alt="photo of Jeremy Keith">
+          </noscript>
+        </div>
+        <div class="speakers--name">Jeremy Keith</div>
+        <div class="speakers--description">Clearleft</div>
+      </a>
+    </li><li class="speakers--highlight speakers--keynote">
+      <a href="/speakers/stephanie-rieger" class="speakers--target">
+        <div class="speakers--photo-container">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/speakers/stephanie-rieger.jpg" class="speakers--photo" alt="Stephanie Rieger">
+          <noscript>
+            <img src="img/speakers/stephanie-rieger.jpg" class="speakers--photo" alt="photo of Stephanie Rieger">
+          </noscript>
+        </div>
+        <div class="speakers--name">Stephanie Rieger</div>
+        <div class="speakers--description">Designer and Researcher</div>
+      </a>
+    </li><li class="speakers--highlight speakers--keynote">
+      <a href="/speakers/josh-clark" class="speakers--target">
+        <div class="speakers--photo-container">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/speakers/josh-clark.jpg" class="speakers--photo" alt="Josh Clark">
+          <noscript>
+            <img src="img/speakers/josh-clark.jpg" class="speakers--photo" alt="photo of Josh Clark">
+          </noscript>
+        </div>
+        <div class="speakers--name">Josh Clark</div>
+        <div class="speakers--description">Founder, Global Moxie</div>
+      </a>
+    </li><li class="speakers--highlight">
+      <a href="/speakers/brad-frost" class="speakers--target">
+        <div class="speakers--photo-container">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/speakers/brad-frost.jpg" class="speakers--photo" alt="Brad Frost">
+          <noscript>
+            <img src="img/speakers/brad-frost.jpg" class="speakers--photo" alt="photo of Brad Frost">
+          </noscript>
+        </div>
+        <div class="speakers--name">Brad Frost</div>
+        <div class="speakers--description">Web Designer</div>
+      </a>
+    </li><li class="speakers--highlight">
+      <a href="/speakers/scott-childs" class="speakers--target">
+        <div class="speakers--photo-container">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/speakers/scott-childs.jpg" class="speakers--photo" alt="Scott Childs">
+          <noscript>
+            <img src="img/speakers/scott-childs.jpg" class="speakers--photo" alt="photo of Scott Childs">
+          </noscript>
+        </div>
+        <div class="speakers--name">Scott Childs</div>
+        <div class="speakers--description">Sr. Interactive Creative Director, Capital One</div>
+      </a>
+    </li><li class="speakers--highlight">
+      <a href="/speakers/brian-dillon" class="speakers--target">
+        <div class="speakers--photo-container">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/speakers/brian-dillon.jpg" class="speakers--photo" alt="Brian Dillon">
+          <noscript>
+            <img src="img/speakers/brian-dillon.jpg" class="speakers--photo" alt="photo of Brian Dillon">
+          </noscript>
+        </div>
+        <div class="speakers--name">Brian Dillon</div>
+        <div class="speakers--description">Interactive Creative Director, UI Engineering, Capital One</div>
+      </a>
+    </li><li class="speakers--highlight">
+      <a href="/speakers/matt-griffin" class="speakers--target">
+        <div class="speakers--photo-container">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/speakers/matt-griffin.jpg" class="speakers--photo" alt="Matt Griffin">
+          <noscript>
+            <img src="img/speakers/matt-griffin.jpg" class="speakers--photo" alt="photo of Matt Griffin">
+          </noscript>
+        </div>
+        <div class="speakers--name">Matt Griffin</div>
+        <div class="speakers--description">Principal, Bearded</div>
+      </a>
+    </li><li class="speakers--highlight">
+      <a href="/speakers/stephen-hay" class="speakers--target">
+        <div class="speakers--photo-container">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/speakers/stephen-hay.jpg" class="speakers--photo" alt="Stephen Hay">
+          <noscript>
+            <img src="img/speakers/stephen-hay.jpg" class="speakers--photo" alt="photo of Stephen Hay">
+          </noscript>
+        </div>
+        <div class="speakers--name">Stephen Hay</div>
+        <div class="speakers--description">Designer</div>
+      </a>
+    </li><li class="speakers--highlight">
+      <a href="/speakers/val-head" class="speakers--target">
+        <div class="speakers--photo-container">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/speakers/val-head.jpg" class="speakers--photo" alt="Val Head">
+          <noscript>
+            <img src="img/speakers/val-head.jpg" class="speakers--photo" alt="photo of Val Head">
+          </noscript>
+        </div>
+        <div class="speakers--name">Val Head</div>
+        <div class="speakers--description">Designer and Consultant</div>
+      </a>
+    </li><li class="speakers--highlight">
+      <a href="/speakers/robert-huddleston" class="speakers--target">
+        <div class="speakers--photo-container">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/speakers/robert-huddleston.jpg" class="speakers--photo" alt="Rob Huddleston">
+          <noscript>
+            <img src="img/speakers/robert-huddleston.jpg" class="speakers--photo" alt="photo of Rob Huddleston">
+          </noscript>
+        </div>
+        <div class="speakers--name">Rob Huddleston</div>
+        <div class="speakers--description">Interactive Creative Director, Capital One</div>
+      </a>
+    </li><li class="speakers--highlight">
+      <a href="/speakers/justine-jordan" class="speakers--target">
+        <div class="speakers--photo-container">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/speakers/justine-jordan.jpg" class="speakers--photo" alt="Justine Jordan">
+          <noscript>
+            <img src="img/speakers/justine-jordan.jpg" class="speakers--photo" alt="photo of Justine Jordan">
+          </noscript>
+        </div>
+        <div class="speakers--name">Justine Jordan</div>
+        <div class="speakers--description">Director at Litmus</div>
+      </a>
+    </li><li class="speakers--highlight">
+      <a href="/speakers/jason-pamental" class="speakers--target">
+        <div class="speakers--photo-container">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/speakers/jason-pamental.jpg" class="speakers--photo" alt="Jason Pamental">
+          <noscript>
+            <img src="img/speakers/jason-pamental.jpg" class="speakers--photo" alt="photo of Jason Pamental">
+          </noscript>
+        </div>
+        <div class="speakers--name">Jason Pamental</div>
+        <div class="speakers--description">Co-Founder, H+W Design</div>
+      </a>
+    </li><li class="speakers--highlight">
+      <a href="/speakers/todd-parker" class="speakers--target">
+        <div class="speakers--photo-container">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/speakers/todd-parker.jpg" class="speakers--photo" alt="Todd Parker">
+          <noscript>
+            <img src="img/speakers/todd-parker.jpg" class="speakers--photo" alt="photo of Todd Parker">
+          </noscript>
+        </div>
+        <div class="speakers--name">Todd Parker</div>
+        <div class="speakers--description">Partner, Filament Group Inc.</div>
+      </a>
+    </li><li class="speakers--highlight">
+      <a href="/speakers/dave-rupert" class="speakers--target">
+        <div class="speakers--photo-container">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/speakers/dave-rupert.jpg" class="speakers--photo" alt="Dave Rupert">
+          <noscript>
+            <img src="img/speakers/dave-rupert.jpg" class="speakers--photo" alt="photo of Dave Rupert">
+          </noscript>
+        </div>
+        <div class="speakers--name">Dave Rupert</div>
+        <div class="speakers--description">Lead Developer, Paravel</div>
+      </a>
+    </li><li class="speakers--highlight">
+      <a href="/speakers/jonathan-stark" class="speakers--target">
+        <div class="speakers--photo-container">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/speakers/jonathan-stark.jpg" class="speakers--photo" alt="Jonathan Stark">
+          <noscript>
+            <img src="img/speakers/jonathan-stark.jpg" class="speakers--photo" alt="photo of Jonathan Stark">
+          </noscript>
+        </div>
+        <div class="speakers--name">Jonathan Stark</div>
+        <div class="speakers--description">Mobile Strategy Consultant</div>
+      </a>
+    </li><li class="speakers--highlight">
+      <a href="/speakers/trent-walton" class="speakers--target">
+        <div class="speakers--photo-container">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/speakers/trent-walton.jpg" class="speakers--photo" alt="Trent Walton">
+          <noscript>
+            <img src="img/speakers/trent-walton.jpg" class="speakers--photo" alt="photo of Trent Walton">
+          </noscript>
+        </div>
+        <div class="speakers--name">Trent Walton</div>
+        <div class="speakers--description">Founder, Paravel</div>
+      </a>
+    </li><li class="speakers--highlight">
+      <a href="/speakers/eileen-webb" class="speakers--target">
+        <div class="speakers--photo-container">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/speakers/eileen-webb.jpg" class="speakers--photo" alt="Eileen Webb">
+          <noscript>
+            <img src="img/speakers/eileen-webb.jpg" class="speakers--photo" alt="photo of Eileen Webb">
+          </noscript>
+        </div>
+        <div class="speakers--name">Eileen Webb</div>
+        <div class="speakers--description">Director of Strategy and Livestock</div>
+      </a>
+    </li><li class="speakers--highlight">
+      <a href="/speakers/james-williamson" class="speakers--target">
+        <div class="speakers--photo-container">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/speakers/james-williamson.jpg" class="speakers--photo" alt="James Williamson">
+          <noscript>
+            <img src="img/speakers/james-williamson.jpg" class="speakers--photo" alt="photo of James Williamson">
+          </noscript>
+        </div>
+        <div class="speakers--name">James Williamson</div>
+        <div class="speakers--description">Senior Author, lynda.com</div>
+      </a>
+    </li></ul>
+
+    <h2 class="sponsors--header"> </h2>
+<p class="sponsors--message">ARTIFACT is grateful to our sponsors who help us make a great experience for our&nbsp;attendees.</p>
+
+
+
+
+
+  <h3 class="sponsorship--teir">Gold Sponsors</h3>
+  <ul class="teir--list">
+    
+      <li class="sponsor--item">
+        <a href="http://www.mailchimp.com" class="sponsor--link">
+         <img src="/img/sponsors/mailchimp.png" alt="Mailchimp" class="sponsor--logo">
+         
+        </a>
+      </li>
+    
+      <li class="sponsor--item">
+        <a href="http://www.capitalone.com" class="sponsor--link">
+         <img src="/img/sponsors/capitalone.png" alt="CapitalOne Design" class="sponsor--logo">
+         
+        </a>
+      </li>
+    
+      <li class="sponsor--item">
+        <a href="http://gymnasium.aquent.com/" class="sponsor--link">
+         <img src="/img/sponsors/aquent-vitamint.png" alt="Aquent/VitaminT/Gymnasium" class="sponsor--logo">
+         
+        </a>
+      </li>
+    
+  </ul>
+
+
+
+
+  <h3 class="sponsorship--teir">Silver Sponsors</h3>
+  <ul class="teir--list">
+    
+      <li class="sponsor--item">
+        <a href="http://oreilly.com" class="sponsor--link">
+         <img src="/img/sponsors/oreilly.png" alt="O&#x27;Reilly Media" class="sponsor--logo">
+         
+        </a>
+      </li>
+    
+      <li class="sponsor--item">
+        <a href="http://www.seesparkbox.com" class="sponsor--link">
+         <img src="/img/sponsors/sparkbox.png" alt="Sparkbox" class="sponsor--logo">
+         
+        </a>
+      </li>
+    
+      <li class="sponsor--item">
+        <a href="http://www.github.com" class="sponsor--link">
+         <img src="/img/sponsors/github.png" alt="GitHub" class="sponsor--logo">
+         
+        </a>
+      </li>
+    
+      <li class="sponsor--item">
+        <a href="http://www.lullabot.com" class="sponsor--link">
+         <img src="/img/sponsors/lullabot.png" alt="Lullabot" class="sponsor--logo">
+         
+        </a>
+      </li>
+    
+  </ul>
+
+
+
+
+
+
+
+  <h3 class="sponsorship--teir">Thank You</h3>
+  <ul class="teir--list">
+    
+      <li class="sponsor--item">
+        <a href="http://www.advisory.com/" class="sponsor--link">
+         <img src="/img/sponsors/theadvisoryboardco.png" alt="The Advisory Board Company" class="sponsor--logo">
+         
+        </a>
+      </li>
+    
+      <li class="sponsor--item">
+        <a href="http://www.uber.com/" class="sponsor--link">
+         <img src="/img/sponsors/uber.png" alt="Uber" class="sponsor--logo">
+         
+        </a>
+      </li>
+    
+      <li class="sponsor--item">
+        <a href="http://lynda.com/" class="sponsor--link">
+         <img src="/img/sponsors/lyndacom.png" alt="Lynda.com" class="sponsor--logo">
+         
+        </a>
+      </li>
+    
+      <li class="sponsor--item">
+        <a href="http://adobe.com/" class="sponsor--link">
+         <img src="/img/sponsors/adobe.png" alt="Adobe" class="sponsor--logo">
+         
+        </a>
+      </li>
+    
+      <li class="sponsor--item">
+        <a href="http://environmentsforhumans.com/" class="sponsor--link">
+         <img src="/img/sponsors/e4h.png" alt="Environments for Humans" class="sponsor--logo">
+         
+        </a>
+      </li>
+    
+      <li class="sponsor--item">
+        <a href="http://abookapart.com/" class="sponsor--link">
+         <img src="/img/sponsors/abookapart.png" alt="A Book Apart" class="sponsor--logo">
+         
+        </a>
+      </li>
+    
+      <li class="sponsor--item">
+        <a href="http://capitalfactory.com/" class="sponsor--link">
+         <img src="/img/sponsors/capitalfactory.png" alt="Capital Factory" class="sponsor--logo">
+         
+        </a>
+      </li>
+    
+      <li class="sponsor--item">
+        <a href="http://stickermule.com/" class="sponsor--link">
+         <img src="/img/sponsors/stickermule.png" alt="Sticker Mule" class="sponsor--logo">
+         
+        </a>
+      </li>
+    
+      <li class="sponsor--item">
+        <a href="http://www.rosenfeldmedia.com/" class="sponsor--link">
+         <img src="/img/sponsors/rosenfeld.png" alt="Rosenfeld Media" class="sponsor--logo">
+         
+        </a>
+      </li>
+    
+      <li class="sponsor--item">
+        <a href="http://kindsnacks.com/" class="sponsor--link">
+         <img src="/img/sponsors/kind.png" alt="KIND Healthy Snacks" class="sponsor--logo">
+         
+        </a>
+      </li>
+    
+      <li class="sponsor--item">
+        <a href="http://www.moo.com/" class="sponsor--link">
+         <img src="/img/sponsors/moo.png" alt="Moo" class="sponsor--logo">
+         
+        </a>
+      </li>
+    
+      <li class="sponsor--item">
+        <a href="http://www.offscreenmag.com/" class="sponsor--link">
+         <img src="/img/sponsors/offscreen.png" alt="Offscreen Magazine" class="sponsor--logo">
+         
+        </a>
+      </li>
+    
+  </ul>
+
+
+  </div>
+</div>
+
+<div class="style--light-gray">
+  <div class="layout--container">
+    <form class="form--mailing-list" action="https://artifactconf.us19.list-manage.com/subscribe/post?u=33ab6ec5339257fc76d81b5bd&amp;id=5fd991ae41" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <label class="form--label" for="mce-EMAIL">Sign up for the ARTIFACT mailing list</label>
+    <div class="form--group">
+      <input class="form--input" type="email" name="EMAIL" id="mce-EMAIL" placeholder="Your email address">
+      <button class="form--button" type="submit" id="mc-embedded-subscribe">Go</button>
+    </div>
+</form>
+
+    <ul class="social--list">
+  
+  <li class="social--item"><a href="http://www.twitter.com/artifactconf" class="social--link icon-social-twitter--white">@artifactconf</a></li>
+  
+  <li class="social--item"><a href="http://www.facebook.com/ArtifactConference" class="social--link icon-social-facebook--white">ArtifactConference</a></li>
+    
+</ul>
+  </div>
+</div>
+<div class="style--black style--crossover">
+  <div class="style--speaker-collage"></div>
+  <div class="layout--container">
+    <h2 class="past-events--title">Past Events</h2>
+<ul class="button--collection">
+  <li class="button--container"><a href="2013/austin" class="style--button">Austin 2013</a></li>
+  <li class="button--container"><a href="2013/providence" class="style--button">Providence 2013</a></li>
+    <li class="button--container"><a href="austin" class="style--button">Austin 2014</a></li>
+    <li class="button--container"><a href="providence" class="style--button">Providence 2014</a></li>
+</ul>
+
+    <h3 class="testimonials--title">What People are Saying</h3>
+<ul class="testimonials--list">
+  
+  <li class="testimonials--quote">&ldquo;Relaxed developers&#x27; conference focused on design acrosss devices&rdquo; 
+      
+       <span class="testimonials--citation"><img src="/img/testimonials/fast-company.png" alt="Fast Company" /></span> 
+	
+  
+  <li class="testimonials--quote">&ldquo;Great conference talks from the remarkably great ARTIFACT Conf&rdquo; 
+      
+       <span class="testimonials--citation"><img src="/img/testimonials/smashing-magazine.png" alt="Smashing Magazine" /></span> 
+	
+  
+  <li class="testimonials--quote">&ldquo;I’ve been to conferences all over the world, but #ARTIFACTconf has been the best by far! How soon can I buy tix for next time?!&rdquo; 
+     
+       <span class="testimonials--citation">Michael P. Gilbert, @mpgilbertusa</span></li>
+	
+  
+  <li class="testimonials--quote">&ldquo;I learned a lot of really useful stuff, much more so than at other conferences I’ve been to, but it was the overall atmosphere of laid back positivity and humble passion that the organizers and speakers clearly exuded that I thought was super special.&rdquo; 
+     
+       <span class="testimonials--citation">Anonymous survey responder</span></li>
+	
+  
+  <li class="testimonials--quote">&ldquo;It’s seriously the best RWD conference you&#x27;ll ever have the chance to be at.&rdquo; 
+     
+       <span class="testimonials--citation">Matt Griffin, Principal, Bearded</span></li>
+	
+  
+  <li class="testimonials--quote">&ldquo;I had a long strategy lunch today and found myself saying &#x27;well at ARTIFACT they said…&#x27; like every few minutes. worth!&rdquo; 
+     
+       <span class="testimonials--citation">Clark Wimberly, @clarklab</span></li>
+	
+  
+  <li class="testimonials--quote">&ldquo;A tremendous amount of learning, and just the right amount of cavorting.&rdquo; 
+     
+       <span class="testimonials--citation">Andrew Miller, Aquent</span></li>
+	
+  
+  <li class="testimonials--quote">&ldquo;Thanks #ARTIFACTconf crew and attendees for creating a fun and stimulating idea space. Lots of a-ha moments.&rdquo; 
+     
+       <span class="testimonials--citation">Jory Cunningham, @oryjay</span></li>
+	
+  
+  <li class="testimonials--quote">&ldquo;Anyone in this industry should attend. I learned a ton of new techniques, but I also came away inspired and ready to get to work.&rdquo; 
+     
+       <span class="testimonials--citation">Charley Allen, Murray State University</span></li>
+	
+  
+  <li class="testimonials--quote">&ldquo;The best &#x27;portal&#x27; of RWD information out there. It starts here, and gets bigger and better moving forward.&rdquo; 
+     
+       <span class="testimonials--citation">Scott Scray, American College of Radiology</span></li>
+	
+  
+  <li class="testimonials--quote">&ldquo;#ARTIFACTconf is so my conference: front-end workflow, process, design strategy… sorry not sorry for geeking out. &rdquo; 
+     
+       <span class="testimonials--citation">Matt Rosno, @mattrosno</span></li>
+	
+  
+  <li class="testimonials--quote">&ldquo;Y&#x27;all have a great conference and I look forward to next year already!&rdquo; 
+     
+       <span class="testimonials--citation">Brian Pierce, Seat Time</span></li>
+	
+  
+  <li class="testimonials--quote">&ldquo;Best conference &amp; venue for the $ that I&#x27;ve been to. Hands down. Inspiration/intelligence were top notch.&rdquo; 
+     
+       <span class="testimonials--citation">Kevin Suttle, @KevinSuttle</span></li>
+	
+  
+</ul>
+
+  </div>
+</div>
+
+
+  <footer class="site--footer">
+    <a href="/" class="footer--logo icon-spiral-a-logo"><span class="footer--hidden">ARTIFACT Conference</span></a>
+    <nav class="footer--navigation">
+  <ul class="footer--nav-list">
+    
+    <li class="footer--nav-item"><a href="/about" class="footer--nav-target">About Artifact</a></li>
+    
+    <li class="footer--nav-item"><a href="/terms" class="footer--nav-target">Terms</a></li>
+    
+    <li class="footer--nav-item"><a href="/privacy" class="footer--nav-target">Privacy</a></li>
+    
+    <li class="footer--nav-item"><a href="/sponsor" class="footer--nav-target">Sponsor</a></li>
+    
+    <li class="footer--nav-item"><a href="/contact" class="footer--nav-target">Contact</a></li>
+    
+  </ul>
+</nav>
+
+    <p class="footer--copyright">Copyright <a href="http://www.jenville.com/" class="copyright--target">Jennifer Robbins</a> and <a href="http://environmentsforhumans.com" class="copyright--target">Environments for Humans</a></p>
+    <p class="footer--maker">Site by <a href="http://seesparkbox.com" class="maker--target">Sparkbox</a></p>
+  </footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/js/jquery-1.9.0.min.js"><\/script>')</script>
+  <!-- replace this with the .min version for production -->
+
+  <script src="/js/artifact-eb67ad72.js"></script>
+  <script>
+    var _gaq=[['_setAccount','UA-408491-9'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
 </body>
 </html>
-
+<!--// LAST DEPLOY Thursday, 30 October 2014 pmt 15:55:05 -0500 //-->
