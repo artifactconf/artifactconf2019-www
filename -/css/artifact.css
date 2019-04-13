@@ -1227,10 +1227,29 @@ sup {
   position: fixed;
 }
 
+.art-c-sculpture_video,
+.art-c-sculpture_videoMask {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  /* z-index: 2; */
+}
+
+.art-c-sculpture_videoMask {
+  box-shadow: inset 0px -24px 32px 32px var(--bodyBackground);
+  /* z-index: 3; */
+}
+
 @media screen and (min-width: 600px) {
   .art-c-sculpture {
     box-shadow: inset 0px -120px 160px 80px var(--bodyBackground);
     padding-top: calc(100vw * 0.5625); /* preserves 16/9 ratio */
+  }
+  .art-c-sculpture_videoMask {
+    box-shadow: inset 0px -120px 160px 80px var(--bodyBackground);
   }
 }
 
