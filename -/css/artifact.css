@@ -570,7 +570,7 @@ sup {
 -------------------------------------------*/
 
 .art-c-hero {
-  background: transparent url(/-/img/speakers.jpg) no-repeat right 0;
+  /* background: transparent url(/-/img/speakers.jpg) no-repeat right 0; */
   background-size: 150%;
   height: 540px;
   max-width: 1280px;
@@ -597,6 +597,10 @@ sup {
 
 .art-c-hero--workshops {
   background-image: url(/-/img/workshops.jpg);
+}
+
+.art-c-hero--contact {
+  background-image: url(/-/img/contact.jpg);
 }
 
 @media screen and (min-width: 800px) {
@@ -1536,7 +1540,7 @@ sup {
 -------------------------------------------*/
 
 .art-js-speakerPlaceholder {
-  background: transparent url(/img/speaker-placeholder.png) no-repeat 0 0;
+  /* background: transparent url(/img/speaker-placeholder.png) no-repeat 0 0; */
   background-size: cover;
   left: 0;
   max-height: 400px;
