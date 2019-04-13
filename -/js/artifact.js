@@ -123,7 +123,7 @@ var Site = function(){
 
         addJSFlag();
         //preloadSite();
-        enhanceSculpture();
+        // enhanceSculpture();
         initSimpleSculpture();
         initNav();
         observeFonts();        
