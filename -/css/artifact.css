@@ -1540,7 +1540,7 @@ sup {
 -------------------------------------------*/
 
 .art-js-speakerPlaceholder {
-  /* background: transparent url(/img/speaker-placeholder.png) no-repeat 0 0; */
+  background: transparent url(/img/speaker-placeholder.png) no-repeat 0 0;
   background-size: cover;
   left: 0;
   max-height: 400px;
