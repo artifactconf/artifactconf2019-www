@@ -892,7 +892,7 @@ sup {
 
 .art-c-mainNav_link:hover,
 .art-c-mainNav_link:focus {
-  color: var(--black);
+  color: var(--pink);
   outline: none;
 }
 
@@ -1540,7 +1540,7 @@ sup {
 -------------------------------------------*/
 
 .art-js-speakerPlaceholder {
-  /* background: transparent url(/img/speaker-placeholder.png) no-repeat 0 0; */
+  background: transparent url(/img/speaker-placeholder.png) no-repeat 0 0;
   background-size: cover;
   left: 0;
   max-height: 400px;
