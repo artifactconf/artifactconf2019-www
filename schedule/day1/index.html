@@ -86,61 +86,73 @@
 
     <main id="main">
 
-        <header class="art-c-pageHeader">
-            <h1 class="art-c-pageHeader_title">Schedule</h1>
+        <div class="art-c-mainWell">
 
-            <ol class="art-c-tabs">
-                <li class="art-c-tabs_tab">
-                    <a href="/schedule/day1/">Day 1<span class="art-dp-hide">:</span> Monday, Sep 31</a>
-                </li>
-                <li class="art-c-tabs_tab">
-                    <a href="/schedule/day2/">Day 2<span class="art-dp-hide">:</span> Tuesday, Oct 1</a>
-                </li>
-            </ol>
-        </header>
+            <header class="art-c-pageHeader">
+                <h1 class="art-c-pageHeader_title">Schedule</h1>
 
-        <section id="the-challenge-of-designing-for-everyone" class="art-c-schedule">
+                <ol class="art-c-tabs">
+                    <li class="art-c-tabs_tab">
+                        <mark class="art-c-tabs_link art-c-tabs_link--active art-dp-eyebrowTerm" aria-current="page">
+                            <span class="art-dp-eyebrowTerm_eyebrow">Day 1</span><span class="art-dp-hide">:</span> 
+                            <span class="art-dp-eyebrowTerm_term">Monday, Sep 31</span>
+                        </mark>
+                    </li>
+                    <li class="art-c-tabs_tab">
+                        <a class="art-c-tabs_link art-dp-eyebrowTerm" href="/schedule/day2/">
+                            <span class="art-dp-eyebrowTerm_eyebrow">Day 2</span><span class="art-dp-hide">:</span> 
+                            <span class="art-dp-eyebrowTerm_term">Tuesday, Oct 1</span>
+                        </a>
+                    </li>
+                </ol>
+
+            </header>            
+        
+        </div><!-- .art-c-mainWell -->
+
+
+        <section id="welcome" class="art-c-schedule vevent">
 
             <h2 class="art-c-schedule_heading">
                 <span class="art-dp-hide">At </span>
-                <time class="art-c-schedule_time" datetime="2019-09-31T09:00">9:00am</time>
+                <time class="art-c-schedule_time dt-start" datetime="2019-09-31T09:00">9:00am</time>
                 <span class="art-dp-hide">, </span>                
-                <span class="art-c-schedule_title">Welcome &amp; Announcements</span>
-            </h3>                      
+                <span class="art-c-schedule_title p-summary">Welcome &amp; Announcements</span>
+            </h2>                      
 
         </section><!-- .art-c-schedule -->
 
-        <section id="the-challenge-of-designing-for-everyone" class="art-c-schedule">
+        <section id="the-challenge-of-designing-for-everyone" class="art-c-schedule vevent">
 
             <h2 class="art-c-schedule_heading">
                 <span class="art-dp-hide">At </span>
-                <time class="art-c-schedule_time" datetime="2019-09-31T09:15">9:15am</time>
+                <time class="art-c-schedule_time dt-start" datetime="2019-09-31T09:15">9:15am</time>
                 <span class="art-dp-hide">, </span>
                 <a class="art-c-schedule_speaker" href="/speakers/#benjamin-evans">
                     <img class="art-c-schedule_speaker_image" src="/img/speakers/benjamin-evans.jpg" alt="" />
                     <span class="art-c-schedule_speaker_name">Benjamin Evans</span>
                 </a>
                 <span class="art-dp-hide"> will speak about </span>
-                <span class="art-c-schedule_title art-c-schedule_title--talk">The Challenge of Designing for Everyone</span>
-            </h3>                      
+                <span class="art-c-schedule_title p-summary art-c-schedule_title--talk">The Challenge of Designing for Everyone</span>
+            </h2>                      
 
         </section><!-- .art-c-schedule -->
 
-        <section id="how-to-think-like-a-front-end-developer" class="art-c-schedule">
+        <section id="how-to-think-like-a-front-end-developer" class="art-c-schedule vevent">
 
             <h2 class="art-c-schedule_heading">
                 <span class="art-dp-hide">At </span>
-                <time class="art-c-schedule_time" datetime="2019-09-31T10:30">10:30am</time>
+                <time class="art-c-schedule_time dt-start" datetime="2019-09-31T10:30">10:30am</time>
                 <span class="art-dp-hide">, </span>
                 <a class="art-c-schedule_speaker" href="/speakers/#chris-coyier">
                     <img class="art-c-schedule_speaker_image" src="/img/speakers/chris-coyier.jpg" alt="" />
                     <span class="art-c-schedule_speaker_name">Chris Coyier</span>
                 </a>
                 <span class="art-dp-hide"> will speak about </span>
-                <span class="art-c-schedule_title art-c-schedule_title--talk">How to Think Like a Front-End Developer</span>
-            </h3>            
+                <span class="art-c-schedule_title p-summary art-c-schedule_title--talk">How to Think Like a Front-End Developer</span>
+            </h2>            
 
-            <div class="art-c-schedule_description">
+            <div class="art-c-schedule_description p-description">
             
                 <p>The job title &ldquo;front-end developer&rdquo; is very real: job boards around the world confirm that. But what is that job, exactly? What do you need to know to do it? You might think those answers are pretty cut and dried, but they&rsquo;re anything but; front-end development is going through something of an identity crisis. In this engaging talk, Chris will explore this identity through the lens of someone who has self-identified as a front-end developer for a few decades, but more interestingly, through many conversations he&rsquo;s had with other successful front-end developers. You&rsquo;ll see just how differently this job can be done and how differently people and companies can think of this role—not just for the sake of doing so, but because you&rsquo;ll learn to be better at your own jobs by understanding how other people are good at theirs.</p>  
             
@@ -148,21 +160,21 @@
 
         </section><!-- .art-c-schedule -->
 
-        <section id="designing-intrinsic-layouts" class="art-c-schedule">
+        <section id="designing-intrinsic-layouts" class="art-c-schedule vevent">
 
             <h2 class="art-c-schedule_heading">
                 <span class="art-dp-hide">At </span>
-                <time class="art-c-schedule_time" datetime="2019-09-31T11:30">11:30am</time>
+                <time class="art-c-schedule_time dt-start" datetime="2019-09-31T11:30">11:30am</time>
                 <span class="art-dp-hide">, </span>
                 <a class="art-c-schedule_speaker" href="/speakers/#jen-simmons">
                     <img class="art-c-schedule_speaker_image" src="/img/speakers/jen-simmons.jpg" alt="" />
                     <span class="art-c-schedule_speaker_name">Jen Simmons</span>
                 </a>
                 <span class="art-dp-hide"> will speak about </span>
-                <span class="art-c-schedule_title art-c-schedule_title--talk">Designing Intrinsic Layouts</span>
-            </h3>            
+                <span class="art-c-schedule_title p-summary art-c-schedule_title--talk">Designing Intrinsic Layouts</span>
+            </h2>            
 
-            <div class="art-c-schedule_description">
+            <div class="art-c-schedule_description p-description">
             
                 <p>Twenty-five years after the web began, we finally have a real toolkit for creating layouts. Combining CSS Grid, Flexbox, Multicolumn, Flow layout and Writing Modes gives us the technical ability to build layouts today without the horrible hacks and compromises of the past. But what does this mean for our design medium? How might we better leverage the art of graphic design? How will we create something practical, useable, and realistically doable? </p>
 
@@ -172,21 +184,34 @@
 
         </section><!-- .art-c-schedule -->
 
-        <section id="the-greatest-redesign-ever-told" class="art-c-schedule">
+
+        <section id="lunch" class="art-c-schedule vevent">
 
             <h2 class="art-c-schedule_heading">
                 <span class="art-dp-hide">At </span>
-                <time class="art-c-schedule_time" datetime="2019-09-31T13:30">1:30pm</time>
+                <time class="art-c-schedule_time dt-start" datetime="2019-09-31T12:20">12:20pm</time>
+                <span class="art-dp-hide">, </span>                
+                <span class="art-c-schedule_title p-summary">Lunch</span>
+            </h2>                      
+
+        </section><!-- .art-c-schedule -->
+        
+
+        <section id="the-greatest-redesign-ever-told" class="art-c-schedule vevent">
+
+            <h2 class="art-c-schedule_heading">
+                <span class="art-dp-hide">At </span>
+                <time class="art-c-schedule_time dt-start" datetime="2019-09-31T13:30">1:30pm</time>
                 <span class="art-dp-hide">, </span>
                 <a class="art-c-schedule_speaker" href="/speakers/#dave-rupert">
                     <img class="art-c-schedule_speaker_image" src="/img/speakers/dave-rupert.jpg" alt="" />
                     <span class="art-c-schedule_speaker_name">Dave Rupert</span>
                 </a>
                 <span class="art-dp-hide"> will speak about </span>
-                <span class="art-c-schedule_title art-c-schedule_title--talk">The Greatest Redesign Ever Told</span>
-            </h3>            
+                <span class="art-c-schedule_title p-summary art-c-schedule_title--talk">The Greatest Redesign Ever Told</span>
+            </h2>            
 
-            <div class="art-c-schedule_description">
+            <div class="art-c-schedule_description p-description">
             
                 <p>This is the tale of a very long redesign process of a responsive website built around the time of the last Artifact conference. After so many years apart, it's a good time to come together and look at some lessons learned. More importantly, we'll look at our code and update our understanding on some of the "best practices" from yesteryear we don't need anymore as the Web Platform has evolved. We can also take a peek at where it is going. Consider this a refresher course in Responsive Web Design.</p>  
             
@@ -194,21 +219,22 @@
 
         </section><!-- .art-c-schedule -->
 
-        <section id="lean-accessibility" class="art-c-schedule">
+
+        <section id="lean-accessibility" class="art-c-schedule vevent">
 
             <h2 class="art-c-schedule_heading">
                 <span class="art-dp-hide">At </span>
-                <time class="art-c-schedule_time" datetime="2019-09-31T14:30">2:30pm</time>
+                <time class="art-c-schedule_time dt-start" datetime="2019-09-31T14:30">2:30pm</time>
                 <span class="art-dp-hide">, </span>
                 <a class="art-c-schedule_speaker" href="/speakers/#elle-waters">
                     <img class="art-c-schedule_speaker_image" src="/img/speakers/elle-waters.jpg" alt="" />
                     <span class="art-c-schedule_speaker_name">Elle Waters</span>
                 </a>
                 <span class="art-dp-hide"> will speak about </span>
-                <span class="art-c-schedule_title art-c-schedule_title--talk">Lean Accessibility</span>
-            </h3>            
+                <span class="art-c-schedule_title p-summary art-c-schedule_title--talk">Lean Accessibility</span>
+            </h2>            
 
-            <div class="art-c-schedule_description">            
+            <div class="art-c-schedule_description p-description">            
                 
                 <p>When people talk about making their digital content accessible to people with disabilities, it sounds cumbersome, expensive, and anything but agile. The list of accessibility compliance requirements is somehow both exhaustive and frustratingly undefined. This creates problems for agile teams in measuring success, and it represents a guaranteed way to kill your project&rsquo;s velocity.</p>
 
@@ -218,41 +244,55 @@
 
         </section><!-- .art-c-schedule -->
 
-        <section id="futuretech" class="art-c-schedule">
+
+        <section id="futuretech" class="art-c-schedule vevent">
 
             <h2 class="art-c-schedule_heading">
                 <span class="art-dp-hide">At </span>
-                <time class="art-c-schedule_time" datetime="2019-09-31T15:45">3:45pm</time>
+                <time class="art-c-schedule_time dt-start" datetime="2019-09-31T15:45">3:45pm</time>
                 <span class="art-dp-hide">, </span>
                 <a class="art-c-schedule_speaker" href="/speakers/#divya-sasidharan">
                     <img class="art-c-schedule_speaker_image" src="/img/speakers/divya-sasidharan.jpg" alt="" />
                     <span class="art-c-schedule_speaker_name">Divya Sasidharan</span>
                 </a>
                 <span class="art-dp-hide"> will speak about </span>
-                <span class="art-c-schedule_title art-c-schedule_title--talk">#futuretech</span>
-            </h3>            
+                <span class="art-c-schedule_title p-summary art-c-schedule_title--talk">#futuretech</span>
+            </h2>            
 
         </section><!-- .art-c-schedule -->
 
-        <section id="putting-the-design-in-design-systems" class="art-c-schedule">
+
+        <section id="putting-the-design-in-design-systems" class="art-c-schedule vevent">
 
             <h2 class="art-c-schedule_heading">
                 <span class="art-dp-hide">At </span>
-                <time class="art-c-schedule_time" datetime="2019-09-31T16:45">4:45pm</time>
+                <time class="art-c-schedule_time dt-start" datetime="2019-09-31T16:45">4:45pm</time>
                 <span class="art-dp-hide">, </span>
                 <a class="art-c-schedule_speaker" href="/speakers/#dan-mall">
                     <img class="art-c-schedule_speaker_image" src="/img/speakers/dan-mall.jpg" alt="" />
                     <span class="art-c-schedule_speaker_name">Dan Mall</span>
                 </a>
                 <span class="art-dp-hide"> will speak about </span>
-                <span class="art-c-schedule_title art-c-schedule_title--talk">Putting the &ldquo;Design&rdquo; in Design Systems</span>
-            </h3>            
+                <span class="art-c-schedule_title p-summary art-c-schedule_title--talk">Putting the &ldquo;Design&rdquo; in Design Systems</span>
+            </h2>            
 
-            <div class="art-c-schedule_description">
+            <div class="art-c-schedule_description p-description">
             
                 <p>Let&rsquo;s face it: design systems are tools to largely help developers to create well-designed products. And that&rsquo;s great! Consistency, headstarts, and shared standards are good for everyone. But where does that leave designers? How do we exercise the advantages of gorgeous art direction and intuitive interaction design? Why does it feel like the job we&rsquo;ve been successfully doing for years is quickly fading away? Dan Mall has been coaching and working with in-house teams on their design systems for a few years. In this talk, he&rsquo;ll share what he&rsquo;s learned about each team member&rsquo;s role, where to be efficient vs. where to be experimental, and how we can all better collaborate to benefit from everyone&rsquo;s knowledge and skills.</p>   
             
             </div>            
+
+        </section><!-- .art-c-schedule -->
+
+
+        <section id="evening" class="art-c-schedule vevent">
+
+            <h2 class="art-c-schedule_heading">
+                <span class="art-dp-hide">At </span>
+                <time class="art-c-schedule_time dt-start" datetime="2019-09-31T12:20">6:00pm</time>
+                <span class="art-dp-hide">, </span>                
+                <span class="art-c-schedule_title p-summary">Evening gathering to be announced</span>
+            </h2>                      
 
         </section><!-- .art-c-schedule -->
            
