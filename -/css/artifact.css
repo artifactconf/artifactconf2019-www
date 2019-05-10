@@ -16,6 +16,7 @@ http://superfriend.ly/
 :root {
   --backdropSpeed: 700ms;
   --bodyBackground: #0d0c0c;
+  --darkestGray: #9c9c9c;
   --easeInOutQuart: cubic-bezier(0.77, 0, 0.175, 1);
   --lighterBackground: #1c1c1e;
   --pink: #c93b9d;
@@ -1234,20 +1235,25 @@ sup {
   } */
 
 .art-c-schedule {
-  margin: 0 auto 8em;
+  margin: 0 auto 12em;
   max-width: var(--pageMaxWidth);
   position: relative;
   width: var(--pageWidth);
 }
 
+  .art-c-schedule_heading {
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
+
   .art-c-schedule_time {
-    color: #9C9C9C;
+    color: var(--darkestGray);
     display: block;
     font-size: 16px;
     font-size: 1.6rem;
     line-height: 1;
-    position: relative;
-    top: 0.4em;
+    /* position: relative;
+    top: 0.4em; */
   }
 
   .art-c-schedule_speaker {
@@ -1263,15 +1269,19 @@ sup {
       position: absolute;
       top: 0;
       right: 0;
-      width: 56px;
-      height: 56px;
+      width: 48px;
+      height: 48px;
     }
-
 
   .art-c-schedule_title {
     display: block;
     margin: 0.4em 0 0;
   }
+
+    .art-c-schedule_title--talk {
+      font-size: 32px;
+      font-size: 3.2rem;
+    }
 
 
 /*-------------------------------------------    
@@ -1626,6 +1636,22 @@ sup {
   top: 0;
   width: 100%;
 }
+
+/*-------------------------------------------    
+	Tabs
+-------------------------------------------*/
+.art-c-tabs {
+  border-bottom: 1px solid var(--darkestGray);
+  display: flex;
+  list-style: none;
+  margin: 0 auto;
+  max-width: var(--pageMaxWidth);
+  width: var(--pageWidth);  
+}
+
+
+
+
 
 /*-------------------------------------------    
 	Talk Title
