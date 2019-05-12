@@ -16,10 +16,12 @@ http://superfriend.ly/
 :root {
   --backdropSpeed: 700ms;
   --bodyBackground: #0d0c0c;
+  --darkestGray: #9c9c9c;
   --easeInOutQuart: cubic-bezier(0.77, 0, 0.175, 1);
   --lighterBackground: #1c1c1e;
   --pink: #c93b9d;
   --black: #000;
+  --white: #fff;
   --pageMaxWidth: 1280px;
   --pageWidth: 90%;
   --textColor: #cacaca;
@@ -202,6 +204,7 @@ textarea::-webkit-input-placeholder {
 table {
   border-collapse: collapse;
   width: 100%;
+  color: var(--white);
 }
 
 th,
@@ -369,6 +372,29 @@ sup {
   margin-left: 0;
 }
 
+.art-dp-eyebrowTerm {
+  border: none;
+  font-size: 16px;
+  font-size: 1.6rem;
+  transition: color var(--transitionSpeed) var(--easeInOutQuart);
+  color: var(--white);
+}
+
+@media screen and (min-width: 1024px){
+  .art-dp-eyebrowTerm {
+    font-size: 24px;
+  }
+}
+
+  .art-dp-eyebrowTerm_eyebrow {
+    color: var(--darkestGray);
+    display: block;
+  }  
+
+  .art-dp-eyebrowTerm:hover {
+    color: white;
+  }
+
 .art-dp-fullWidthWrapper {
   padding: 8em 0;
   margin: 0 0 4em;
@@ -387,6 +413,15 @@ sup {
 .art-dp-list--horizontal li {
   display: inline;
   margin-left: 1em;
+}
+
+.art-dp-hide {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
 }
 
 /* -----------------------    J S - S P E C I F I C   ------------------------ */
@@ -570,7 +605,7 @@ sup {
 -------------------------------------------*/
 
 .art-c-hero {
-  /* background: transparent url(/-/img/speakers.jpg) no-repeat right 0; */
+  background: transparent url(/-/img/speakers.jpg) no-repeat right 0;
   background-size: 150%;
   height: 540px;
   max-width: 1280px;
@@ -1202,6 +1237,132 @@ sup {
 }
 
 /*-------------------------------------------    
+	Schedule
+-------------------------------------------*/
+
+.art-c-schedule {
+  margin: 0 auto 8em;
+  max-width: var(--pageMaxWidth);
+  position: relative;
+  width: var(--pageWidth);
+}
+
+  .art-c-schedule_heading {
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
+
+  .art-c-schedule_time {
+    color: var(--darkestGray);
+    display: block;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1;
+  }
+
+  .art-c-schedule_speaker {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+
+    .art-c-schedule_speaker_name {
+      
+    }
+
+    .art-c-schedule_speaker_image {
+      height: 48px;
+      position: absolute;      
+      right: 0;
+      top: 0;
+      width: 48px;      
+    }
+
+  .art-c-schedule_title {
+    display: block;
+    margin: 0.4em 0 0;
+  }
+
+    .art-c-schedule_title--talk {
+      font-size: 32px;
+      font-size: 3.2rem;
+    }
+
+/* Layout on a grid */
+
+@media screen and (min-width: 1024px){
+
+  .art-c-schedule {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-column-gap: 80px;    
+  }
+
+  .art-c-schedule--talk {
+    min-height: 200px;
+  }
+
+  .art-c-schedule_heading,
+  .art-c-schedule_speaker {
+    display: contents;
+  }
+
+  .art-c-schedule_time {
+    font-size: 24px;
+    font-size: 2.4rem;
+    grid-column: 1 / 2;
+    grid-row: 1;
+    text-align: right;
+  }
+
+  .art-c-schedule_speaker_name,
+  .art-c-schedule_title {
+    grid-column: 2 / 3;
+    grid-row: 1;
+  }  
+
+  .art-c-schedule_title {
+    margin: 0;
+  }
+
+  .art-c-schedule_speaker_name {
+    color: var(--pink);
+    font-size: 24px;
+    font-size: 2.4rem;
+    transition: color var(--transitionSpeed) var(--easeInOutQuart);
+    margin-top: -0.1em;
+  }
+
+  .art-c-schedule_speaker:hover .art-c-schedule_speaker_name {
+    color: var(--white);
+  }
+
+  .art-c-schedule_description {
+    grid-column: 2 / 3;
+  }
+
+  .art-c-schedule_speaker_image {
+    grid-column: 3 / 4;
+    grid-row: 1;
+    width: auto;
+    height: auto;
+  }
+
+  .art-c-schedule_title--talk {
+    font-size: 40px;
+    font-size: 4.0rem;
+    margin-bottom: 0.4em;
+    padding-top: 0.8em;
+  }
+
+  .art-c-schedule:last-child {
+    margin-bottom: 120px;
+  }
+
+
+}
+
+
+/*-------------------------------------------    
 	Sculpture
 -------------------------------------------*/
 .art-c-sculpture {
@@ -1436,7 +1597,9 @@ sup {
 .art-c-speakerList_subhead {
   color: var(--textColor);
   font-size: 16px;
+  font-size: 1.6rem;
   letter-spacing: 0;
+  line-height: 1.5;
 }
 
 .art-c-speakerList_headline + .art-c-speakerList_subhead {
@@ -1551,6 +1714,60 @@ sup {
   top: 0;
   width: 100%;
 }
+
+/*-------------------------------------------    
+	Tabs
+-------------------------------------------*/
+.art-c-tabs {
+  border-bottom: 1px solid var(--darkestGray);
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+
+  .art-c-tabs_tab {
+    margin-right: 2.4em;
+  }
+
+  @media screen and (min-width: 1024px){
+    .art-c-tabs_tab {
+      margin-right: 3.2em;
+    }
+  }
+
+  .art-c-tabs_link {
+    display: block;
+    padding-bottom: 1.6em;
+    position: relative;
+  }
+
+  .art-c-tabs_link:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--pink);
+    transform: scaleY(0);
+    transition: transform var(--transitionSpeed) var(--easeInOutQuart);
+  }
+
+  .art-c-tabs_link:hover:after {
+    /* border-bottom-color: var(--pink); */
+    transform: scaleY(1);
+    background: var(--pink);
+  }
+
+  .art-c-tabs_link[aria-current="page"]:after {
+    /* border-bottom-color: white; */
+    transform: scaleY(1);
+    background: var(--white);
+  }
+
+
+
 
 /*-------------------------------------------    
 	Talk Title
