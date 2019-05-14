@@ -437,10 +437,11 @@ var Site = function(){
         if(_sculpture){
 
             if (!window.matchMedia('(prefers-reduced-motion)').matches) {
-                _sculpture.innerHTML = '<video class="art-c-sculpture_video" playsinline autoplay muted preload="auto" poster="/-/img/sculpture-poster.jpg"><source src="/-/mp4/sculpture.mp4" type="video/mp4"><p>Your browser doesn&rsquo;t support HTML5 video. Here is a <a href="/-/mp4/sculpture.mp4">link to the video</a> instead.</p></video><div class="art-c-sculpture_videoMask"></div>';
+                _sculpture.innerHTML = '<video class="art-c-sculpture_video" playsinline autoplay muted preload="auto" poster="/-/img/sculpture-poster.jpg"><source src="/-/mp4/sculpture2.mp4" type="video/mp4"><p>Your browser doesn&rsquo;t support HTML5 video. Here is a <a href="/-/mp4/sculpture2.mp4">link to the video</a> instead.</p></video><div class="art-c-sculpture_videoMask"></div>';
             }
 
-            TweenMax.set(_sculpture, { autoAlpha: 1 });
+            TweenMax.set(_sculpture, { autoAlpha: 0 });
+            TweenMax.to(_sculpture, 1, { autoAlpha: 1 });
 
             calculateSculptureFadeOutSpeed();
 
