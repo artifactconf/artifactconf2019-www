@@ -19,7 +19,8 @@ http://superfriend.ly/
   --darkestGray: #9c9c9c;
   --easeInOutQuart: cubic-bezier(0.77, 0, 0.175, 1);
   --lighterBackground: #1c1c1e;
-  --pink: #c93b9d;
+  /* --pink: #c93b9d; */
+  --pink: #e20277;
   --black: #000;
   --white: #fff;
   --pageMaxWidth: 1280px;
@@ -1367,7 +1368,7 @@ sup {
 -------------------------------------------*/
 .art-c-sculpture {
   /* background-image: url('/-/img/sculpture-placeholder.png');	 */
-  background-image: url("/img/home/sculpture/sculpture-poster.jpg");
+  background-image: url("/img/home/sculpture/sculpture-poster2.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   /* background-size: 100%; */
@@ -1390,6 +1391,12 @@ sup {
 .js .art-c-sculpture {
   /* background-image: url("/img/home/sculpture/artifact-sculpture2.png");	*/
   position: fixed;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  .js .art-c-sculpture {
+    background: var(--black);
+  }
 }
 
 .art-c-sculpture_video,
