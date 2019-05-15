@@ -429,11 +429,11 @@ sup {
 /*                         (organized alphabetically)                          */
 
 .art-js-lazy {
-  background: var(--pink);
+  /* background: var(--pink);
   color: #fff;
   font-size: 16px;
   text-align: center;
-  padding: 4em 0;
+  padding: 4em 0; */
 }
 
 /* -------------------------    C O M P O N E N T S   -------------------------- */
