@@ -344,89 +344,102 @@ var Site = function(){
     }
 
     /* Thanks Google! https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/ */
-    var lazyLoadSpeakers = function(){
+    /* Thanks Addy! https://addyosmani.com/blog/lazy-loading/ */
+    var lazyLoadSpeakers = function(){        
 
         // insert placeholder for speakers page
-        var _speakerPhotos = document.querySelectorAll('.art-c-mediaBlock_image');
+        // var _speakerPhotos = document.querySelectorAll('.art-c-mediaBlock_image');
 
-        for(var i = 0; i < _speakerPhotos.length; i++){
-            var _original = _speakerPhotos[i].innerHTML;
-            var _new = '<div class="art-js-speakerPlaceholder"></div>' + _original;
-            //var _new = '<div class="art-js-speakerPlaceholder"><img src="/img/speaker-placeholder.png" alt="" /></div>' + _original;
-            _speakerPhotos[i].innerHTML = _new;
-        }
+        // for(var i = 0; i < _speakerPhotos.length; i++){
+        //     var _original = _speakerPhotos[i].innerHTML;
+        //     var _new = '<div class="art-js-speakerPlaceholder"></div>' + _original;
+        //     _speakerPhotos[i].innerHTML = _new;
+        // }
 
-
-        // replace lazy images
-        var lazyImages = [].slice.call(document.querySelectorAll("img.art-js-lazy"));
-        
-        if ("IntersectionObserver" in window) {
-            let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        let lazyImage = entry.target;
-                        lazyImage.src = lazyImage.dataset.src;
-                        //lazyImage.srcset = lazyImage.dataset.srcset;
-                        lazyImage.classList.remove("art-js-lazy");
-                        lazyImageObserver.unobserve(lazyImage);
-                        
-                        var lazyPlaceholder = lazyImage.parentElement.firstChild;
-                        //TweenMax.fromTo(lazyPlaceholder, 1, { autoAlpha: 1 }, { autoAlpha: 0 }, 1);
-                        TweenMax.set(lazyPlaceholder, { transformOrigin: "100% 100%" });
-                        TweenMax.fromTo(lazyPlaceholder, 2, { width: '100%' }, { width: '0', ease: Expo.easeInOut } );
-                    }
-                });
-            });
-        
-            lazyImages.forEach(function(lazyImage) {
-                lazyImageObserver.observe(lazyImage);
+        if ('loading' in HTMLImageElement.prototype) {
+            
+            const lazyImages = document.querySelectorAll("img.art-js-lazy");
+            lazyImages.forEach(lazyImage => {
+                lazyImage.src = lazyImage.dataset.src;
             });
 
         } else {
-            // if IntersectionObserver support is limited
-
-            let lazyImages = [].slice.call(document.querySelectorAll("img.art-js-lazy"));
-            let active = false;
-
-            const lazyLoad = function() {
-                if (active === false) {
-                    active = true;
-
-                    setTimeout(function() {
-                        lazyImages.forEach(function(lazyImage) {
-                            if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
-                                lazyImage.src = lazyImage.dataset.src;
-                                //lazyImage.srcset = lazyImage.dataset.srcset;
-                                lazyImage.classList.remove("art-js-lazy");
-
-                                var lazyPlaceholder = lazyImage.parentElement.firstChild;
-                                TweenMax.set(lazyPlaceholder, { transformOrigin: "100% 100%" });
-                                TweenMax.fromTo(lazyPlaceholder, 2, { width: '100%' }, { width: '0', ease: Expo.easeInOut } );
-
-                                lazyImages = lazyImages.filter(function(image) {
-                                    return image !== lazyImage;
-                                });
-
-                                if (lazyImages.length === 0) {
-                                    document.removeEventListener("scroll", lazyLoad);
-                                    window.removeEventListener("resize", lazyLoad);
-                                    window.removeEventListener("orientationchange", lazyLoad);
-                                }
-                            }
-                        });
-
-                        active = false;
-                        
-                    }, 200);                    
-                }
-            };
-
-            lazyLoad(); // forcing load the first image if it's in view
-
-            document.addEventListener("scroll", lazyLoad);
-            window.addEventListener("resize", lazyLoad);
-            window.addEventListener("orientationchange", lazyLoad);
+        
+                // replace lazy images
+            var lazyImages = [].slice.call(document.querySelectorAll("img.art-js-lazy"));
             
+            if ("IntersectionObserver" in window) {
+                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {                        
+
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            //lazyImage.srcset = lazyImage.dataset.srcset;
+                            lazyImage.classList.remove("art-js-lazy");
+                            lazyImageObserver.unobserve(lazyImage);
+
+                            TweenMax.set(lazyImage, { autoAlpha: 0 });
+                            TweenMax.to(lazyImage, 2, { autoAlpha: 1 , delay: 1 });    
+                            
+                            // var lazyPlaceholder = lazyImage.parentElement.firstChild;
+                            // TweenMax.set(lazyPlaceholder, { transformOrigin: "100% 100%" });
+                            // TweenMax.fromTo(lazyPlaceholder, 2, { width: '100%' }, { width: '0', ease: Expo.easeInOut } );
+                        }
+                    });
+                });
+            
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+
+            } else {
+                // if IntersectionObserver support is limited
+
+                let lazyImages = [].slice.call(document.querySelectorAll("img.art-js-lazy"));
+                let active = false;
+
+                const lazyLoad = function() {
+                    if (active === false) {
+                        active = true;
+
+                        setTimeout(function() {
+                            lazyImages.forEach(function(lazyImage) {
+                                if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
+                                    lazyImage.src = lazyImage.dataset.src;
+                                    //lazyImage.srcset = lazyImage.dataset.srcset;
+                                    lazyImage.classList.remove("art-js-lazy");
+
+                                    // var lazyPlaceholder = lazyImage.parentElement.firstChild;
+                                    // TweenMax.set(lazyPlaceholder, { transformOrigin: "100% 100%" });
+                                    // TweenMax.fromTo(lazyPlaceholder, 2, { width: '100%' }, { width: '0', ease: Expo.easeInOut } );
+
+                                    lazyImages = lazyImages.filter(function(image) {
+                                        return image !== lazyImage;
+                                    });
+
+                                    if (lazyImages.length === 0) {
+                                        document.removeEventListener("scroll", lazyLoad);
+                                        window.removeEventListener("resize", lazyLoad);
+                                        window.removeEventListener("orientationchange", lazyLoad);
+                                    }
+                                }
+                            });
+
+                            active = false;
+                            
+                        }, 200);                    
+                    }
+                };
+
+                lazyLoad(); // forcing load the first image if it's in view
+
+                document.addEventListener("scroll", lazyLoad);
+                window.addEventListener("resize", lazyLoad);
+                window.addEventListener("orientationchange", lazyLoad);
+                
+            }
+
         }
 
     }
