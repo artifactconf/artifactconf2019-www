@@ -359,8 +359,8 @@ var Site = function(){
         if ('loading' in HTMLImageElement.prototype) {
             
             const lazyImages = document.querySelectorAll("img.art-js-lazy");
-            lazyImages.forEach(img => {
-                img.src = img.dataset.src;
+            lazyImages.forEach(lazyImage => {
+                lazyImage.src = lazyImage.dataset.src;
             });
 
         } else {
