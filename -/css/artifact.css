@@ -331,11 +331,19 @@ sup {
 
 @media screen and (min-width: 760px) {
   .art-l-columns--3 {
+    /* fallback for old */
+    display: flex; 
+    justify-content: space-between;
+    flex-direction: row;
+    /* Modern browsers */
     display: grid;
     grid-column-gap: 80px;
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+  .art-l-columns--3 .art-l-col {
+    flex: 0 0 30%;
+  }
   .art-l-columns--3 .art-l-col:first-child {
     grid-column: 1;
   }
@@ -546,6 +554,10 @@ sup {
 
 @media screen and (min-width: 1020px) {
   .art-c-emailList .art-dp-fullWidthWrapper_inner {
+    /* old browsers */
+    display:flex;
+    justify-content: center;
+    /* modern browsers */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-column-gap: 24px;
@@ -745,6 +757,9 @@ sup {
   margin-bottom: 4em;
 }
 
+.art-c-logo_graphic {
+  height: 17px;
+}
 @media screen and (min-width: 600px) {
   .art-c-logo {
     margin-bottom: 0;
@@ -771,6 +786,7 @@ sup {
   transition: transform 2s var(--easeInOutQuart);
   vertical-align: middle;
   width: 16px;
+  height: 15px;
   z-index: 2;
 }
 
@@ -1496,6 +1512,11 @@ sup {
 
   .art-c-siteHeader .art-dp-fullWidthWrapper_inner,
   .art-c-siteHeader--intro .art-dp-fullWidthWrapper_inner {
+    /* old browsers */
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    /* modern browsers */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-column-gap: 24px;
@@ -1506,6 +1527,12 @@ sup {
     width: var(--pageWidth);
   }
 
+  /* navbar on all pages except main */
+  .art-c-siteHeader .art-dp-fullWidthWrapper_inner {
+    justify-content: space-between;
+  }
+
+
   .art-page--home .art-c-siteHeader .art-dp-fullWidthWrapper_inner,
   .art-page--home .art-c-siteHeader--intro .art-dp-fullWidthWrapper_inner {
     padding: 0;
@@ -1513,6 +1540,9 @@ sup {
 }
 
 .art-c-siteHeader--intro .art-c-definitionList {
+  /* old browsers */
+  flex: 0 0 26%;
+  /* modern browsers */
   grid-column-start: 3;
   grid-column-end: span 2;
 }
@@ -1529,6 +1559,9 @@ sup {
 	Site Intro
 -------------------------------------------*/
 .art-c-siteIntro {
+  /* old browsers */
+  flex: 0 0 78%;
+  /* modern browsers */
   grid-column: 3 / -1;
   margin-bottom: 1em;
   font-size: 32px;
@@ -1586,6 +1619,11 @@ sup {
 -------------------------------------------*/
 
 .art-c-speakerList {
+  /* old browsers */
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* modern browsers */
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 24px;
@@ -1596,6 +1634,9 @@ sup {
 
 .art-c-speakerList_headline,
 .art-c-speakerList_subhead {
+  /* old browsers */
+  flex: 0 0 100%;
+  /* modern browsers */
   grid-column: 1 / -1;
   letter-spacing: -1px;
   margin-bottom: 3em;
@@ -1614,7 +1655,10 @@ sup {
 }
 
 .art-c-speakerList .art-c-mediaBlock {
-  display: flex;
+  /* old browsers */
+  flex: 0 0 48%;
+  /* modern browsers */
+  display: block;
   margin: 0 0 6em;
   max-width: none;
   width: auto;
@@ -1640,6 +1684,11 @@ sup {
     grid-column: 2 / -1;
   }
 
+  .art-c-speakerList .art-c-mediaBlock {
+    /* old browsers */
+    flex: 0 0 30%;
+  }
+
   .art-c-speakerList .art-c-mediaBlock:nth-of-type(3n + 1) {
     grid-column-start: 1;
   }
@@ -1658,6 +1707,11 @@ sup {
   .art-c-speakerList {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 24px;
+  }
+
+  .art-c-speakerList .art-c-mediaBlock {
+    /* old browsers */
+    flex: 0 0 23%;
   }
 
   .art-c-speakerList .art-c-mediaBlock:nth-of-type(4n + 1) {
@@ -1730,6 +1784,16 @@ sup {
   display: flex;
   list-style: none;
   margin: 0;
+}
+
+.art-c-tabs--fixed {
+  background: rgba(0, 0, 0, 0.9);
+  max-width: 1280px;
+  padding-top: 1.6em;
+  position: fixed;  
+  top: 0;
+  width: 100%;  
+  z-index: 1000;  
 }
 
   .art-c-tabs_tab {
@@ -1831,6 +1895,11 @@ sup {
   }
 
   .art-c-testimonials .art-dp-fullWidthWrapper_inner {
+    /* old browsers */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* modern browsers */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 24px;
@@ -1841,7 +1910,15 @@ sup {
 
   .art-c-testimonials_headline,
   .art-c-testimonials_subhead {
+    /* old browsers */
+    flex: 0 0 100%;
+    /* modern browsers */
     grid-column: 1 / span 2;
+  }
+
+  .art-c-testimonials .art-c-card {
+      /* old browsers */
+      flex: 0 0 29%;
   }
 }
 
