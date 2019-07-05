@@ -134,8 +134,6 @@ var Site = function(){
         
         polyfillCSSVars();
         addJSFlag();
-        //preloadSite();
-        // enhanceSculpture();
         initSimpleSculpture();
         initNav();
         observeFonts();        
@@ -184,102 +182,6 @@ var Site = function(){
         );
 
     }
-
-
-    var preloadSite = function(){
-
-        // animate in the preloader
-
-        TweenMax.set('.art-c-preloader_headline span', { autoAlpha: 0, y: 10, rotation: 15, transformOrigin: '0 0' });
-        TweenMax.staggerTo(
-            '.art-c-preloader_headline span',
-            1,
-            {                 
-                autoAlpha: 1,
-                y: 0,
-                ease: Expo.easeInOut,
-                rotation: 0,
-                delay: 1
-            },
-            0.1
-        );
-
-        // show progress
-        setTimeout(function(){
-
-            var _sculptureImage = new Image();
-            _sculptureImage.load("/img/home/sculpture/artifact-sculpture2.png");        
-
-            var _checkLoading = setInterval(checkLoadingInterval, 33)
-                
-            function checkLoadingInterval(){
-                if(_sculptureImage.completedPercentage < 100){
-                    //console.log(_sculptureImage.completedPercentage);
-                    TweenMax.to('.art-c-preloader_loader', 0.5, { scaleY: _sculptureImage.completedPercentage/100 });
-                }else{
-                    //console.log(_sculptureImage.completedPercentage);
-                    //console.log('stop');
-
-
-                    // animate progress bar
-                    TweenMax.to(
-                        '.art-c-preloader_loader', 
-                        0.5, 
-                        {                             
-                            scaleY: 1, 
-                            onComplete: function(){
-                                // fade out and remove preloader
-                                TweenMax.to(
-                                    '.art-c-preloader', 
-                                    1.5, 
-                                    { 
-                                        delay: 1, 
-                                        autoAlpha: 0, 
-                                        onComplete: function(){
-                                            document.body.removeChild(document.querySelector('.art-c-preloader'));
-                                            initSimpleSculpture();                                            
-                                        }
-                                    }
-                                );
-                                playSculpture();
-                            },
-                        });
-
-                    clearInterval(_checkLoading);
-                }
-            }
-        }, 3000);
-
-    }
-
-
-
-    var enhanceSculpture = function(){
-
-        if(_sculpture){
-
-            if(document.documentElement.clientWidth >= 600){
-
-                var _sculptureImage = new Image();
-                _sculptureImage.load("/img/home/sculpture/artifact-sculpture2.png");        
-
-                var _checkLoading = setInterval(checkLoadingInterval, 33)
-            }
-                
-            function checkLoadingInterval(){
-                if(_sculptureImage.completedPercentage >= 100){
-                    clearInterval(_checkLoading);
-                    _sculpture.style.backgroundImage = 'url("/img/home/sculpture/artifact-sculpture2.png")';
-                    playSculpture();
-                }
-            }
-
-        }
-
-    }
-
-
-
 
     var initNav = function() {                   
 
