@@ -1786,6 +1786,16 @@ sup {
   margin: 0;
 }
 
+.art-c-tabs--fixed {
+  background: rgba(0, 0, 0, 0.9);
+  max-width: 1280px;
+  padding-top: 1.6em;
+  position: fixed;  
+  top: 0;
+  width: 100%;  
+  z-index: 1000;  
+}
+
   .art-c-tabs_tab {
     margin-right: 2.4em;
   }

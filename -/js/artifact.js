@@ -120,6 +120,8 @@ var Site = function(){
         _siteHeader                     =   document.querySelector('.art-c-siteHeader'),
         _backdrop                       =   document.createElement('div'),
         _sculpture                      =   document.querySelector('.art-c-sculpture'),
+        _scheduleTabs                   =   document.querySelector('.art-c-tabs'),
+        _scheduleWelcome                =   document.querySelector('#welcome'),
         _sculptureFrameCounter          =   0,
         _sculptureFrames                =   30,
         _sculptureFrameHeight           =   0,
@@ -139,6 +141,7 @@ var Site = function(){
         observeFonts();        
         lazyLoadSpeakers();
         initRellax();
+        initStickySchedule();
         
     }
 
@@ -605,6 +608,42 @@ var Site = function(){
             TweenMax.fromTo(_hero, 5, { autoAlpha: 0 }, { autoAlpha: 1 });
 
         }
+
+    }
+
+    var initStickySchedule = function(){
+
+        var _stickyScheduleAlreadyRun = false;
+
+        var scheduleTabsObserver = new IntersectionObserver(entries => {
+            if(entries[0].boundingClientRect.y < 0) {
+                var _scheduleTabsHeight = _scheduleTabs.offsetHeight;
+                _scheduleTabs.classList.add('art-c-tabs--fixed');
+                _stickyScheduleAlreadyRun = true;
+                _scheduleWelcome.style = 'margin-top: ' + _scheduleTabsHeight + 'px';
+                TweenMax.fromTo(_scheduleTabs, 2, { autoAlpha: 0 }, { autoAlpha: 1 });
+            }else{
+                if(_stickyScheduleAlreadyRun){
+                    TweenMax.fromTo(
+                        _scheduleTabs, 
+                        1, 
+                        { autoAlpha: 1 }, 
+                        { 
+                            autoAlpha: 0, 
+                            onComplete: function(){
+                                _scheduleTabs.classList.remove('art-c-tabs--fixed');
+                                _scheduleWelcome.style = 'margin-top: 0';
+                                TweenMax.fromTo(_scheduleTabs, 1, { autoAlpha: 0 }, { autoAlpha: 1 });
+                            } 
+                        });
+                    
+                }
+            }
+        }, {
+            threshold: 1.0
+        });
+
+        scheduleTabsObserver.observe(_scheduleWelcome);
 
     }
     
