@@ -802,7 +802,7 @@ sup {
   }
 
   .art-c-mainNav--vertical .art-c-loneStarLink {
-    background: none;
+    /* background: none; */
     margin-left: 0;
   }
 
