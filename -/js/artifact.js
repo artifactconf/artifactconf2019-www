@@ -120,6 +120,8 @@ var Site = function(){
         _siteHeader                     =   document.querySelector('.art-c-siteHeader'),
         _backdrop                       =   document.createElement('div'),
         _sculpture                      =   document.querySelector('.art-c-sculpture'),
+        _scheduleTabs                   =   document.querySelector('.art-c-tabs'),
+        _scheduleWelcome                =   document.querySelector('#welcome'),
         _sculptureFrameCounter          =   0,
         _sculptureFrames                =   30,
         _sculptureFrameHeight           =   0,
@@ -132,13 +134,12 @@ var Site = function(){
         
         polyfillCSSVars();
         addJSFlag();
-        //preloadSite();
-        // enhanceSculpture();
         initSimpleSculpture();
         initNav();
         observeFonts();        
         lazyLoadSpeakers();
         initRellax();
+        initStickySchedule();
         
     }
 
@@ -181,102 +182,6 @@ var Site = function(){
         );
 
     }
-
-
-    var preloadSite = function(){
-
-        // animate in the preloader
-
-        TweenMax.set('.art-c-preloader_headline span', { autoAlpha: 0, y: 10, rotation: 15, transformOrigin: '0 0' });
-        TweenMax.staggerTo(
-            '.art-c-preloader_headline span',
-            1,
-            {                 
-                autoAlpha: 1,
-                y: 0,
-                ease: Expo.easeInOut,
-                rotation: 0,
-                delay: 1
-            },
-            0.1
-        );
-
-        // show progress
-        setTimeout(function(){
-
-            var _sculptureImage = new Image();
-            _sculptureImage.load("/img/home/sculpture/artifact-sculpture2.png");        
-
-            var _checkLoading = setInterval(checkLoadingInterval, 33)
-                
-            function checkLoadingInterval(){
-                if(_sculptureImage.completedPercentage < 100){
-                    //console.log(_sculptureImage.completedPercentage);
-                    TweenMax.to('.art-c-preloader_loader', 0.5, { scaleY: _sculptureImage.completedPercentage/100 });
-                }else{
-                    //console.log(_sculptureImage.completedPercentage);
-                    //console.log('stop');
-
-
-                    // animate progress bar
-                    TweenMax.to(
-                        '.art-c-preloader_loader', 
-                        0.5, 
-                        {                             
-                            scaleY: 1, 
-                            onComplete: function(){
-                                // fade out and remove preloader
-                                TweenMax.to(
-                                    '.art-c-preloader', 
-                                    1.5, 
-                                    { 
-                                        delay: 1, 
-                                        autoAlpha: 0, 
-                                        onComplete: function(){
-                                            document.body.removeChild(document.querySelector('.art-c-preloader'));
-                                            initSimpleSculpture();                                            
-                                        }
-                                    }
-                                );
-                                playSculpture();
-                            },
-                        });
-
-                    clearInterval(_checkLoading);
-                }
-            }
-        }, 3000);
-
-    }
-
-
-
-    var enhanceSculpture = function(){
-
-        if(_sculpture){
-
-            if(document.documentElement.clientWidth >= 600){
-
-                var _sculptureImage = new Image();
-                _sculptureImage.load("/img/home/sculpture/artifact-sculpture2.png");        
-
-                var _checkLoading = setInterval(checkLoadingInterval, 33)
-            }
-                
-            function checkLoadingInterval(){
-                if(_sculptureImage.completedPercentage >= 100){
-                    clearInterval(_checkLoading);
-                    _sculpture.style.backgroundImage = 'url("/img/home/sculpture/artifact-sculpture2.png")';
-                    playSculpture();
-                }
-            }
-
-        }
-
-    }
-
-
-
 
     var initNav = function() {                   
 
@@ -605,6 +510,42 @@ var Site = function(){
             TweenMax.fromTo(_hero, 5, { autoAlpha: 0 }, { autoAlpha: 1 });
 
         }
+
+    }
+
+    var initStickySchedule = function(){
+
+        var _stickyScheduleAlreadyRun = false;
+
+        var scheduleTabsObserver = new IntersectionObserver(entries => {
+            if(entries[0].boundingClientRect.y < 0) {
+                var _scheduleTabsHeight = _scheduleTabs.offsetHeight;
+                _scheduleTabs.classList.add('art-c-tabs--fixed');
+                _stickyScheduleAlreadyRun = true;
+                _scheduleWelcome.style = 'margin-top: ' + _scheduleTabsHeight + 'px';
+                TweenMax.fromTo(_scheduleTabs, 2, { autoAlpha: 0 }, { autoAlpha: 1 });
+            }else{
+                if(_stickyScheduleAlreadyRun){
+                    TweenMax.fromTo(
+                        _scheduleTabs, 
+                        1, 
+                        { autoAlpha: 1 }, 
+                        { 
+                            autoAlpha: 0, 
+                            onComplete: function(){
+                                _scheduleTabs.classList.remove('art-c-tabs--fixed');
+                                _scheduleWelcome.style = 'margin-top: 0';
+                                TweenMax.fromTo(_scheduleTabs, 1, { autoAlpha: 0 }, { autoAlpha: 1 });
+                            } 
+                        });
+                    
+                }
+            }
+        }, {
+            threshold: 1.0
+        });
+
+        scheduleTabsObserver.observe(_scheduleWelcome);
 
     }
     
