@@ -447,6 +447,47 @@ sup {
 /* -------------------------    C O M P O N E N T S   -------------------------- */
 /*                          (organized alphabetically)                           */
 
+
+/*-------------------------------------------    
+	Alert
+-------------------------------------------*/
+.art-c-alert {
+  background: var(--pink);
+  color: var(--white);  
+  grid-column: 1 / -1;
+  margin: 0 0 8em;
+  padding: 4em 4em 1.6em 13.6em;
+  position: relative;
+}
+
+  .art-c-alert_text > * {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+
+  .art-c-alert_link {
+    border-bottom: 1px solid var(--white);
+    color: var(--white);
+    text-decoration: none;    
+    transition: border-bottom-color var(--transitionSpeed) var(--easeInOutQuart),
+  }
+
+  .art-c-alert_link:hover {
+    color: var(--white);
+    text-decoration: none;
+    border-bottom-color: rgba(255, 255, 255, 0);
+  }
+
+  .art-s-alert--info {
+    width: 36px;
+    position: absolute;
+    top: 4em;
+    left: 4em;
+  }
+
+
+
+
 /*-------------------------------------------    
 	Card
 -------------------------------------------*/
