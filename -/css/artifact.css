@@ -1817,6 +1817,58 @@ sup {
   width: 100%;
 }
 
+
+/*-------------------------------------------    
+	Sponsors
+-------------------------------------------*/
+.art-c-sponsors {
+
+}
+
+  .art-c-sponsors_headline {
+    color: var(--darkestGray);
+    font-size: 24px;
+    margin-bottom: 40px;
+    text-align: center;    
+  }
+
+  .art-c-sponsors_row {
+    margin-bottom: 120px;
+        
+  }
+
+  @media screen and (min-width: 600px){
+    .art-c-sponsors_row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      left: 40px;
+    }
+  }
+
+  .art-c-sponsors_logo_link {
+    border: none;
+  }
+
+  .art-c-sponsors_logo {
+    margin: 0 auto 10em;
+    width: 125px;
+  }
+
+  @media screen and (min-width: 600px){
+    .art-c-sponsors_logo {
+      margin-right: 80px;
+      width: 100px;
+    }
+  }
+
+  @media screen and (min-width: 1100px){
+    .art-c-sponsors_logo {
+      width: 150px;
+    }
+  }
+
 /*-------------------------------------------    
 	Tabs
 -------------------------------------------*/
@@ -2034,9 +2086,9 @@ sup {
 /*-------------------------------------------    
 	Debugging...
 -------------------------------------------*/
-#sponsors {
+/* #sponsors {
   display: none;
-}
+} */
 
 #main {
   position: relative;
